@@ -11,7 +11,7 @@ export default class FadeIn extends React.Component {
     return (
       <View {...this.props}>
         <View style={styles.placeholderContainer}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]} />
+          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>{this.props.loading}</View>
         </View>
 
         {image}
