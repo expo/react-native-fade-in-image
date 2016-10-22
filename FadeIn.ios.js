@@ -27,7 +27,7 @@ export default class FadeIn extends React.Component {
         {image}
 
         <Animated.View style={[styles.placeholderContainer, {opacity: this.state.placeholderContainerOpacity}]}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]} />
+          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>{this.props.loading}</View>
         </Animated.View>
       </View>
     );
