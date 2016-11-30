@@ -23,7 +23,7 @@ const FancyImage = () => (
 #### Props
 - `style` adds style to the image wrapper.
 - `renderPlaceholder` renders an element while loading the image, e.g. a spinner.
-- `placeholderStyle` adds style to the placeholder wrapper, default background color is `#eee`.
+- `placeholderStyle` adds style to the placeholder wrapper, default background color is `#fff`.
 
 ### Full Example
 
@@ -48,7 +48,6 @@ const FancyImage = ({ uri, style }) => (
   <FadeIn
     style={style}
     renderPlaceholder={<Placeholder />}
-    placeholderStyle={{ backgroundColor: '#fff' }}
   >
     <Image source={{ uri }} style={full} />
   </FadeIn>
