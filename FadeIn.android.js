@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-let onlyChild = React.Children.only;
+const onlyChild = React.Children.only;
 
 export default class FadeIn extends React.Component {
 
@@ -11,7 +11,9 @@ export default class FadeIn extends React.Component {
     return (
       <View {...this.props}>
         <View style={styles.placeholderContainer}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]} />
+          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>
+            {this.props.renderPlaceholderContent}
+          </View>
         </View>
 
         {image}

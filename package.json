@@ -5,6 +5,12 @@
   "main": "index.js",
   "author": "Brent Vatne <brentvatne@gmail.com>",
   "license": "MIT",
+  "files": [
+    "FadeIn.android.js",
+    "FadeIn.ios.js",
+    "index.js",
+    "README.md"
+  ],
   "dependencies": {
     "react-clone-referenced-element": "^1.0.1",
     "react-mixin": "^3.0.5",

@@ -5,7 +5,7 @@ import TimerMixin from 'react-timer-mixin';
 import reactMixin from 'react-mixin';
 import cloneReferencedElement from 'react-clone-referenced-element';
 
-let onlyChild = React.Children.only;
+const onlyChild = React.Children.only;
 
 export default class FadeIn extends React.Component {
   constructor(props, context) {
@@ -27,7 +27,9 @@ export default class FadeIn extends React.Component {
         {image}
 
         <Animated.View style={[styles.placeholderContainer, {opacity: this.state.placeholderContainerOpacity}]}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]} />
+          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>
+            {this.props.renderPlaceholderContent}
+          </View>
         </Animated.View>
       </View>
     );
