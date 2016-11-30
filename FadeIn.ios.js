@@ -65,6 +65,6 @@ let styles = StyleSheet.create({
     right: 0,
   },
   placeholder: {
-    backgroundColor: '#eee',
+    backgroundColor: '#fff',
   },
 });
