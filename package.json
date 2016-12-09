@@ -1,6 +1,6 @@
 {
   "name": "@exponent/react-native-fade-in-image",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Wrap Image components in <FadeIn> to have them fade in pleasantly when they finish loading",
   "main": "index.js",
   "author": "Brent Vatne <brentvatne@gmail.com>",
