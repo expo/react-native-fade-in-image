@@ -1,15 +1,15 @@
 {
   "name": "fade-in-image-example",
   "version": "0.0.0",
-  "description": "Hello Exponent!",
-  "author": "exponent.team@gmail.com",
+  "description": "Hello Expo!",
+  "author": "support@expo.io",
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "@exponent/react-native-fade-in-image": "file:///Users/brent/coding/fade-in-image",
-    "@exponent/vector-icons": "~2.0.3",
-    "exponent": "~12.0.0",
-    "react": "~15.3.2",
-    "react-native": "git+https://github.com/exponentjs/react-native#sdk-12.0.0"
+    "@expo/react-native-fade-in-image": "../",
+    "@expo/vector-icons": "~4.0.0",
+    "expo": "~14.0.2",
+    "react": "~15.4.0",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz"
   }
 }

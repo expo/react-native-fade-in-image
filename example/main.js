@@ -1,9 +1,9 @@
-import Exponent from 'exponent';
+import Expo from 'expo';
 
 import React from 'react';
 import { ActivityIndicator, Image, View } from 'react-native';
 
-import FadeIn from '@exponent/react-native-fade-in-image';
+import FadeIn from '@expo/react-native-fade-in-image';
 
 const Placeholder = () => (
   <View style={landing}>
@@ -33,4 +33,4 @@ const FadeInExample = () => (
 const full = { flex: 1 };
 const landing = { flex: 1, alignItems: 'center', justifyContent: 'center' };
 
-Exponent.registerRootComponent(FadeInExample);
+Expo.registerRootComponent(FadeInExample);
