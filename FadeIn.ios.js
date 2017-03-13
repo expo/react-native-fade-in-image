@@ -22,7 +22,7 @@ export default class FadeIn extends React.Component {
       onLoadEnd: this._onLoadEnd,
     });
 
-    let safeImageProps = {...image.props.style.tintColor}
+    let safeImageProps = {...StyleSheet.flatten(image.props.style)}
     delete safeImageProps.tintColor
     delete safeImageProps.overflow
     delete safeImageProps.resizeMode
