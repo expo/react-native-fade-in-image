@@ -24,13 +24,10 @@ export default class FadeIn extends React.Component {
 
     let imageStyle = StyleSheet.flatten(image.props.style);
 
-    // `delete` doesn't work in JSCore? 
-    let imagePortableStyle = {}
-    for (let a in imageStyle) {
-      if (a !== "resizeMode") {
-        imagePortableStyle[a] = imageStyle[a]
-      }
-    };
+    const {
+      resizeMode,
+      ...imagePortableStyle
+    } =  imageStyle
 
     return (
       <View {...this.props}>
