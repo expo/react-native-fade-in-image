@@ -22,12 +22,22 @@ export default class FadeIn extends React.Component {
       onLoadEnd: this._onLoadEnd,
     });
 
+    let imageStyle = StyleSheet.flatten(image.props.style);
+
+    // `delete` doesn't work in JSCore? 
+    let imagePortableStyle = {}
+    for (let a in imageStyle) {
+      if (a !== "resizeMode") {
+        imagePortableStyle[a] = imageStyle[a]
+      }
+    };
+
     return (
       <View {...this.props}>
         {image}
 
         <Animated.View style={[styles.placeholderContainer, {opacity: this.state.placeholderContainerOpacity}]}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>
+          <View style={[imagePortableStyle, styles.placeholder, this.props.placeholderStyle]}>
             {this.props.renderPlaceholderContent}
           </View>
         </Animated.View>
@@ -40,12 +50,12 @@ export default class FadeIn extends React.Component {
        fires, there are two unwanted consequences:
      1. Animation feels janky - not entirely sure why that is
        (handled with minimumWait)
-     2. Many images finish loading in the same frame for some reason, and in my
+     2. [Optional] Many images finish loading in the same frame for some reason, and in my
        opinion it looks better when the images fade in separately
        (handled with staggerNonce) */
 
     const minimumWait = 100;
-    const staggerNonce = 200 * Math.random();
+    const staggerNonce = this.props.randomDelay ? 200 * Math.random() : 0;
 
     this.setTimeout(() => {
       Animated.timing(this.state.placeholderContainerOpacity, {
