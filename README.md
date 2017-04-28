@@ -2,8 +2,6 @@
 
 Wrap Image components in `<FadeIn>` to have them fade in pleasantly when they finish loading.
 
-This is a (hopefully) temporary version of Expo's react-native-fade-in-image by @brentvatne with some fixes and mods
-
 ### Installation
 
 ```
