@@ -8,12 +8,12 @@ import cloneReferencedElement from 'react-clone-referenced-element';
 const onlyChild = React.Children.only;
 
 export default class FadeIn extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  static defaultProps = {
+    useNativeDriver: true,
+  }
 
-    this.state = {
-      placeholderContainerOpacity: new Animated.Value(1),
-    };
+  state = {
+    placeholderContainerOpacity: new Animated.Value(1),
   }
 
   render() {
@@ -51,6 +51,7 @@ export default class FadeIn extends React.Component {
       Animated.timing(this.state.placeholderContainerOpacity, {
         toValue: 0,
         duration: 350,
+        useNativeDriver: this.props.useNativeDriver,
       }).start();
     }, minimumWait + staggerNonce);
   };
