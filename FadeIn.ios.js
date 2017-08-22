@@ -10,6 +10,7 @@ const onlyChild = React.Children.only;
 export default class FadeIn extends React.Component {
   static defaultProps = {
     useNativeDriver: true,
+    displayASAP: false,
   }
 
   state = {
@@ -48,8 +49,8 @@ export default class FadeIn extends React.Component {
        opinion it looks better when the images fade in separately
        (handled with staggerNonce) */
 
-    const minimumWait = 100;
-    const staggerNonce = 200 * Math.random();
+    const minimumWait = 10;
+    const staggerNonce = (this.props.displayASAP === true ? 0 : 200 * Math.random());
 
     this.setTimeout(() => {
       Animated.timing(this.state.placeholderContainerOpacity, {
