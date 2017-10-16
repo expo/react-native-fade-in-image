@@ -1,11 +1,11 @@
-## @expo/react-native-fade-in-image
+## react-native-fade-in-image
 
 Wrap Image components in `<FadeIn>` to have them fade in pleasantly when they finish loading.
 
 ### Installation
 
 ```
-npm i @expo/react-native-fade-in-image --save
+npm i react-native-fade-in-image --save
 ```
 
 ### Usage
@@ -13,7 +13,7 @@ npm i @expo/react-native-fade-in-image --save
 ```javascript
 import React from 'react';
 import { Image } from 'react-native';
-import FadeIn from '@expo/react-native-fade-in-image';
+import FadeIn from 'react-native-fade-in-image';
 
 const uri = 'https://d3lwq5rlu14cro.cloudfront.net/v1/AQ5jDS5SYyUkapWWEviV.png';
 

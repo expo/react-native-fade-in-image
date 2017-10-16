@@ -8,10 +8,14 @@ export default class FadeIn extends React.Component {
   render() {
     let image = onlyChild(this.props.children);
 
+    // Get rid of any unused styles to avoid warnings
+    let imageStyle = StyleSheet.flatten(image.props.style);
+    delete imageStyle.resizeMode;
+
     return (
       <View {...this.props}>
         <View style={styles.placeholderContainer}>
-          <View style={[image.props.style, styles.placeholder, this.props.placeholderStyle]}>
+          <View style={[imageStyle, styles.placeholder, this.props.placeholderStyle]}>
             {this.props.renderPlaceholderContent}
           </View>
         </View>
