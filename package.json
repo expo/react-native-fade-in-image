@@ -7,7 +7,7 @@
   "license": "MIT",
   "files": [
     "FadeIn.android.js",
-    "FadeIn.ios.js",
+    "FadeIn.native.js",
     "index.js",
     "README.md"
   ],
