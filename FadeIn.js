@@ -10,19 +10,21 @@ const onlyChild = React.Children.only;
 export default class FadeIn extends React.Component {
   static defaultProps = {
     useNativeDriver: true,
-  }
+  };
 
   state = {
     placeholderContainerOpacity: new Animated.Value(1),
-  }
+  };
 
   render() {
     let image = cloneReferencedElement(onlyChild(this.props.children), {
-      ref: component => { this._image = component; },
+      ref: component => {
+        this._image = component;
+      },
       onLoadEnd: this._onLoadEnd,
     });
 
-    let safeImageProps = {...StyleSheet.flatten(image.props.style)};
+    let safeImageProps = { ...StyleSheet.flatten(image.props.style) };
     delete safeImageProps.tintColor;
     delete safeImageProps.resizeMode;
 
@@ -30,8 +32,19 @@ export default class FadeIn extends React.Component {
       <View {...this.props}>
         {image}
 
-        <Animated.View style={[styles.placeholderContainer, {opacity: this.state.placeholderContainerOpacity}]}>
-          <View style={[safeImageProps, styles.placeholder, this.props.placeholderStyle]}>
+        <Animated.View
+          style={[
+            styles.placeholderContainer,
+            { opacity: this.state.placeholderContainerOpacity },
+          ]}
+        >
+          <View
+            style={[
+              safeImageProps,
+              styles.placeholder,
+              this.props.placeholderStyle,
+            ]}
+          >
             {this.props.renderPlaceholderContent}
           </View>
         </Animated.View>
