@@ -9,6 +9,7 @@
     "FadeIn.android.js",
     "FadeIn.js",
     "index.js",
+    "index.d.ts",
     "README.md"
   ],
   "dependencies": {
