@@ -1,9 +1,7 @@
-import Expo from 'expo';
-
 import React from 'react';
 import { ActivityIndicator, Image, View } from 'react-native';
 
-import FadeIn from '@expo/react-native-fade-in-image';
+import FadeIn from 'react-native-fade-in-image';
 
 const Placeholder = () => (
   <View style={landing}>
@@ -18,19 +16,19 @@ const FancyImage = ({ uri, style }) => (
   <FadeIn
     style={style}
     renderPlaceholderContent={ <Placeholder /> }
-    placeholderStyle={{ backgroundColor: '#fff' }}>
+    placeholderStyle={{ backgroundColor: '#eee' }}>
     <Image source={{ uri }} style={full} />
   </FadeIn>
 );
 
-const FadeInExample = () => (
-  <View style={full}>
-    <FancyImage uri={uri1} style={full} />
-    <FancyImage uri={uri2} style={full} />
-  </View>
-);
+export default function App () {
+  return (
+    <View style={full}>
+      <FancyImage uri={uri1} style={full} />
+      <FancyImage uri={uri2} style={full} />
+    </View>
+  );
+}
 
 const full = { flex: 1 };
 const landing = { flex: 1, alignItems: 'center', justifyContent: 'center' };
-
-Expo.registerRootComponent(FadeInExample);

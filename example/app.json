@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "fade-in-image-example",
+    "description": "Example project for https://github.com/expo/react-native-fade-in-image",
+    "slug": "fade-in-image-example",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png"
+    }
+  }
+}
