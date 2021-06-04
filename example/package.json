@@ -1,15 +1,22 @@
 {
-  "name": "fade-in-image-example",
-  "version": "0.0.0",
-  "description": "Hello Expo!",
-  "author": "support@expo.io",
-  "private": true,
-  "main": "main.js",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
   "dependencies": {
-    "@expo/react-native-fade-in-image": "../",
-    "@expo/vector-icons": "~4.0.0",
-    "expo": "~14.0.2",
-    "react": "~15.4.0",
-    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz"
-  }
+    "react-native-fade-in-image": "^1.5.0",
+    "expo": "~41.0.1",
+    "expo-status-bar": "~1.0.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "^0.63.2",
+    "react-native-web": "~0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0"
+  },
+  "private": true
 }
