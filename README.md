@@ -1,3 +1,9 @@
+# Deprecated: replaced by expo-image
+
+This library is deprecated. Use [expo-image](https://docs.expo.dev/versions/latest/sdk/image/) instead - it has this behavior built-in.
+
+<hr />
+
 ## react-native-fade-in-image
 
 Wrap Image components in `<FadeIn>` to have them fade in pleasantly when they finish loading.
