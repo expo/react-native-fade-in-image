@@ -22,6 +22,7 @@ export default class FadeIn extends React.Component {
         this._image = component;
       },
       onLoadEnd: this._onLoadEnd,
+      onLoadStart: this._onLoadStart,
     });
 
     let safeImageProps = { ...StyleSheet.flatten(image.props.style) };
@@ -71,6 +72,10 @@ export default class FadeIn extends React.Component {
         useNativeDriver: this.props.useNativeDriver,
       }).start();
     }, minimumWait + staggerNonce);
+  };
+
+  _onLoadStart = () => {
+    this.state.placeholderContainerOpacity.setValue(1)
   };
 }
 
